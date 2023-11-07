@@ -15,13 +15,35 @@ namespace dotnetapp.Controllers
             _context = context;
         }
         private List<Player> pList=new List<Player>{
-            new Player{Id=1,Age=25,Name=Sunil Chhetri,Category=Football,BiddingPrice=10000},
-            new Player{Id=2,Age=30,Name=Virat Kohli,Category=Cricket,BiddingPrice=20000},
-            new Player{Id=3,Age=35,Name=Virender,Category=Boxing,BiddingPrice=30000},
-            new Player{Id=4,Age=40,Name=,Category=Football,BiddingPrice=10000},
+            new Player{Id=1,Age=25,Name="Sunil Chhetri",Category="Football",BiddingPrice=10000},
+            new Player{Id=2,Age=30,Name="Virat Kohli",Category="Cricket",BiddingPrice=20000},
+            new Player{Id=3,Age=35,Name="Virender",Category="Boxing",BiddingPrice=30000},
+            new Player{Id=4,Age=40,Name="Anup Kumar",Category="Kabaddi",BiddingPrice=40000},
+        };
             
-        }
+        
         public IActionResult Index()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create()
+        {
+            return RedirectToAction("Index");
+        }
+        public IActionResult FindPlayer(int id)
+        {
+            return View();
+        }
+        public IActionResult DeletePlayer(int id)
+        {
+            return View();
+        }
     }
 }
 
