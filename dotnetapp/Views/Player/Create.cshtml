@@ -1,1 +1,28 @@
 @model dotnetapp.Models.Player
+<h4>Enter Details</h4>
+@using(Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Age)
+            @Html.EditorFor(m=>m.Age)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Name)
+            @Html.EditorFor(m=>m.Name)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Category)
+            @Html.EditorFor(m=>m.Category)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.BiddingAmount)
+            @Html.EditorFor(m=>m.BiddingAmount)
+        </div>
+        <br>
+    </div>
+    <intput type="submit" value="Add" class="btn btn-primary" />
+}
