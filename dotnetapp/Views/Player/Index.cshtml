@@ -1,7 +1,27 @@
-@model IEnumerable<dotnetapp.Controllers.PlayerController>
+@model IEnumerable<dotnetapp.Models.Player>
     <h4>Player</h4>
-    @Html.ActionLink("Add Player","Create")
-    @using(Html.BeginForm())
-    {
-        <input>
+    @Html.ActionLink("Add Player","Create","Player")
+   
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(m=>m.Id)</th>
+            <th>@Html.DisplayNameFor(m=>m.Age)</th>
+            <th>@Html.DisplayNameFor(m=>m.Name)</th>
+            <th>@Html.DisplayNameFor(m=>m.Category)</th>
+            <th>@Html.DisplayNameFor(m=>m.BiddingPrice)</th>
+        </tr>
+        <tbody>
+            @foreach(var v in Model)
+            {
+                <tr>
+                    <td>Html.DisplayFor(m=>m.Id)</td>
+                    <td>Html.DisplayFor(m=>m.Age)</td>
+                    <td>Html.DisplayFor(m=>m.Name)</td>
+                    <td>Html.DisplayFor(m=>m.Category)</td>
+                    <td>Html.DisplayFor(m=>m.BiddingPrice)</td>
+                </tr>
+            
+            }
+        </tbody>
+
     }
