@@ -14,7 +14,7 @@ builder.Services.AddControllersWithViews();
 
 // Add your DbContext and Identity services
 // ...
-builder.Services.AddDbContext<ApplicationDbContext>(Options=>{options.UseSqlServer(builder.Configuration.GetConnectionStrings("connectionString"));});
+builder.Services.AddDbContext<ApplicationDbContext>(options=>{options.UseSqlServer(builder.Configuration.GetConnectionStrings("DevConnection"));});
 
 var app = builder.Build();
 
