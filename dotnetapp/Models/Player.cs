@@ -9,6 +9,6 @@ namespace dotnetapp.Models
         public int Age{get;set;}
         public string Name{get;set;}
         public string Category{get;set;}
-        public decimal BiddingPrice{get;set;}
+        public decimal BiddingAmount{get;set;}
     }
 }
