@@ -24,7 +24,8 @@ namespace dotnetapp.Controllers
         
         public IActionResult Index()
         {
-            return View();
+            
+            return View(pList);
         }
         [HttpGet]
         public IActionResult Create()
@@ -40,9 +41,23 @@ namespace dotnetapp.Controllers
         {
             return View();
         }
+        [HttpGet]
         public IActionResult DeletePlayer(int id)
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult DeletePlayer(int id,Player player)
+        {
+            return RedirectToAction("Index");
+        }
+        public IActionResult EditPlayer(int id)
+        {
+            return View();
+        }
+        public IActionResult EditPlayer(int id,Player player)
+        {
+            return RedirectToAction("Index");
         }
     }
 }
