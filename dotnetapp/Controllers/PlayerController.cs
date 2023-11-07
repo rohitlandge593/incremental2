@@ -36,6 +36,7 @@ namespace dotnetapp.Controllers
         public IActionResult Create(Player player)
         {
             pList.Add(player);
+            
             return RedirectToAction("Index");
         }
         public IActionResult FindPlayer(int id)
