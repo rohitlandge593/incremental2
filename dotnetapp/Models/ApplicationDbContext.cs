@@ -13,6 +13,8 @@ namespace dotnetapp.Models
 
         // Define DbSet properties for your custom application entities here, if needed.
         // For example, if you have a Player entity, you can add it ...
+        public DbSet<Player> Players{get;set;}
+        
         
     }
 }
