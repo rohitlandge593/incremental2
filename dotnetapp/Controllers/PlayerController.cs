@@ -30,8 +30,9 @@ namespace dotnetapp.Controllers
         
         public IActionResult Index()
         {
-            
-            return View(pList);
+            var playerList=_context.Players;
+            //return View(pList);
+            return View(playerList);
         }
         [HttpGet]
         public IActionResult Create()
@@ -41,8 +42,8 @@ namespace dotnetapp.Controllers
         [HttpPost]
         public IActionResult Create(Player player)
         {
-            pList.Add(player);
-            
+            //pList.Add(player);
+            _context.Players.Add(player);
             return RedirectToAction("Index");
         }
         [HttpGet]
@@ -64,7 +65,8 @@ namespace dotnetapp.Controllers
         [HttpGet]
         public IActionResult DeletePlayer(int id)
         {
-            var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            //var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
                 return View(playerList);
@@ -75,17 +77,20 @@ namespace dotnetapp.Controllers
         [HttpPost]
         public IActionResult DeletePlayer(int id,Player player)
         {
-            var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            //var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
-                pList.Remove(playerList);
+                //pList.Remove(playerList);
+                _context.Players.Remove(playerList);
             }
             return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult EditPlayer(int id)
         {
-            var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            //var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
                 return View(playerList);
@@ -96,7 +101,8 @@ namespace dotnetapp.Controllers
         [HttpPost]
         public IActionResult EditPlayer(int id,Player player)
         {
-            var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            //var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
                 playerList.Age=player.Age;

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using dotnetapp.Models;
 
 namespace dotnetapp.Controllers
 {
@@ -17,6 +18,7 @@ namespace dotnetapp.Controllers
         // {
         //     _logger = logger;
         // }
+        public TeamController(Applicatio)
 
         public IActionResult Index()
         {
