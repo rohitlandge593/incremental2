@@ -20,8 +20,9 @@
                     <td>@v.Category</td>
                     <td>@v.BiddingAmount</td>
                     <td>
-                        <input type="submit" value="Edit" class="btn btn-primary">
-                        <input type="submit" value="Delete" class="btn btn-primary">
+                        @Html.ActionLink("Edit","EditPlayer","Player",new{id=v.Id}) &nbsp;&nbsp;&nbsp;
+                        @Html.ActionLink("Delete","DeletePlayer","Player",new{id=v.Id}) &nbsp;&nbsp;&nbsp;
+
                     </td> 
                    
                 </tr>
