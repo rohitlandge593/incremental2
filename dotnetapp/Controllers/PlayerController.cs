@@ -45,9 +45,19 @@ namespace dotnetapp.Controllers
             
             return RedirectToAction("Index");
         }
+        [HttpGet]
         public IActionResult FindPlayer()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult FindPlayer(int id)
+        {
+            var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            if(playerList!=null)
+            {
+                return View("Search");
+            }
         }
         [HttpGet]
         public IActionResult DeletePlayer(int id)
