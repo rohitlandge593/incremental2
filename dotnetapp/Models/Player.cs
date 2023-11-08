@@ -10,5 +10,6 @@ namespace dotnetapp.Models
         public string Name{get;set;}
         public string Category{get;set;}
         public decimal BiddingAmount{get;set;}
+        public Team? Team{get;set;}
     }
 }
