@@ -62,7 +62,7 @@ namespace dotnetapp.Controllers
                 return View("Search",playerList);
             }
             else    
-                return RedirectToAction("Index");
+                return NotFound("ID Not Found");
         }
         [HttpGet]
         public IActionResult DeletePlayer(int id)

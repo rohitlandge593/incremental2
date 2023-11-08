@@ -3,11 +3,14 @@
 <br>
 <hr>
 <h4>Enter the Id to be Search</h4>
-@usingHtml.BeginForm
+@using(Html.BeginForm())
+{
         @Html.DisplayNameFor(m=>m.Id)
         @Html.EditorFor(m=>m.Id)
-    </div>
+
     <br>
-</div>
+    <br>
+    <br>
 <input type="submit" value="SearchPlayer" class="btn btn-primary" />
+}
 
