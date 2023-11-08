@@ -56,8 +56,10 @@ namespace dotnetapp.Controllers
             var playerList=pList.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
-                return View("Search");
+                return View(playerList);
             }
+            else    
+                return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult DeletePlayer(int id)
