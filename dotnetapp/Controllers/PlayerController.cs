@@ -44,14 +44,15 @@ namespace dotnetapp.Controllers
             
             return RedirectToAction("Index");
         }
-        public IActionResult FindPlayer(int id)
-        {
-            return View();
-        }
+        // public IActionResult FindPlayer(int id)
+        // {
+        //     return View();
+        // }
         [HttpGet]
         public IActionResult DeletePlayer(int id)
         {
-            return View();
+            var playerList=pList.Find(id);
+            return View(playerList);
         }
         [HttpPost]
         public IActionResult DeletePlayer(int id,Player player)
