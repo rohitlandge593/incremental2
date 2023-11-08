@@ -84,6 +84,7 @@ namespace dotnetapp.Controllers
             {
                 //pList.Remove(playerList);
                 _context.Players.Remove(playerList);
+                _context.SaveChanges();
             }
             return RedirectToAction("Index");
         }
@@ -110,6 +111,7 @@ namespace dotnetapp.Controllers
                 playerList.Name=player.Name;
                 playerList.Category=player.Category;
                 playerList.BiddingAmount=player.BiddingAmount;
+                _context.SaveChanges();
                 
             }
             return RedirectToAction("Index");
