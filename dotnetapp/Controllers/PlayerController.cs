@@ -45,10 +45,10 @@ namespace dotnetapp.Controllers
             
             return RedirectToAction("Index");
         }
-        // public IActionResult FindPlayer(int id)
-        // {
-        //     return View();
-        // }
+        public IActionResult FindPlayer()
+        {
+            return View();
+        }
         [HttpGet]
         public IActionResult DeletePlayer(int id)
         {
@@ -95,6 +95,7 @@ namespace dotnetapp.Controllers
             }
             return RedirectToAction("Index");
         }
+
     }
 }
 
