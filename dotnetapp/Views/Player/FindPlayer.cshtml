@@ -3,8 +3,7 @@
 <br>
 <hr>
 <h4>Enter the Id to be Search</h4>
-<div class="form-horizontal">
-    <div class="form-group">
+@usingHtml.BeginForm
         @Html.DisplayNameFor(m=>m.Id)
         @Html.EditorFor(m=>m.Id)
     </div>

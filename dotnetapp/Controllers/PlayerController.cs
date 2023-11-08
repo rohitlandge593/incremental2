@@ -55,7 +55,8 @@ namespace dotnetapp.Controllers
         [HttpPost]
         public IActionResult FindPlayer(int id)
         {
-            var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            //var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
                 return View("Search",playerList);
