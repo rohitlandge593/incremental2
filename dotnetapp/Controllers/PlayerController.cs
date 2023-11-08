@@ -19,12 +19,13 @@ namespace dotnetapp.Controllers
 
 
 
-        private static  List<Player> pList=new List<Player>{
-            new Player{Id=1,Age=25,Name="Sunil Chhetri",Category="Football",BiddingAmount=10000},
-            new Player{Id=2,Age=30,Name="Virat Kohli",Category="Cricket",BiddingAmount=20000},
-            new Player{Id=3,Age=35,Name="Virender",Category="Boxing",BiddingAmount=30000},
-            new Player{Id=4,Age=40,Name="Anup Kumar",Category="Kabaddi",BiddingAmount=40000},
-        };
+        private static  List<Player> pList=new List<Player>();
+        // {
+        //     new Player{Id=1,Age=25,Name="Sunil Chhetri",Category="Football",BiddingAmount=10000},
+        //     new Player{Id=2,Age=30,Name="Virat Kohli",Category="Cricket",BiddingAmount=20000},
+        //     new Player{Id=3,Age=35,Name="Virender",Category="Boxing",BiddingAmount=30000},
+        //     new Player{Id=4,Age=40,Name="Anup Kumar",Category="Kabaddi",BiddingAmount=40000},
+        // };
             
         
         public IActionResult Index()
@@ -51,23 +52,52 @@ namespace dotnetapp.Controllers
         [HttpGet]
         public IActionResult DeletePlayer(int id)
         {
-            var playerList=pList.Find(id);
-            return View(playerList);
+            var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            if(playerList!=null)
+            {
+                return View(playerList);
+            }
+            else    
+                return NotFound();
         }
         [HttpPost]
         public IActionResult DeletePlayer(int id,Player player)
         {
-            pList.Remove()
+            var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            if(playerList!=null)
+            {
+                pList.Remove(playerList);
+            }
             return RedirectToAction("Index");
         }
+        [HttpGet]
         public IActionResult EditPlayer(int id)
         {
-            return View();
+            var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            if(playerList!=null)
+            {
+                return View(playerList);
+            }
+            else    
+                return NotFound();
         }
+        [HttpPost]
         public IActionResult EditPlayer(int id,Player player)
         {
+            var playerList=pList.FirstOrDefault(i=>i.Id==id);
+            if(playerList!=null)
+            {
+                playerList.Age=player.Age;
+                playerList.Name=player.Name;
+                playerList.Category=player.Category;
+                playerList.BiddingAmount=player.BiddingAmount;
+                
+            }
             return RedirectToAction("Index");
         }
     }
 }
+
+
+
 

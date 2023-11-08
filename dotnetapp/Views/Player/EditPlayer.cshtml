@@ -1,0 +1,34 @@
+@model dotnetapp.Models.Player;
+<h4>Edit</h4>
+@using(Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Id)
+            @Html.DisplayFor(m=>m.Id)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Age)
+            @Html.EditorFor(m=>m.Age)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Name)
+            @Html.EditorFor(m=>m.Name)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Category)
+            @Html.EditorFor(m=>m.Category)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.BiddingAmount)
+            @Html.EditorFor(m=>m.BiddingAmount)
+        </div>
+        <br>
+        <br>
+    </div>
+    <input type="submit" value="EditPlayer" calss="btn btn-primary">
+}
