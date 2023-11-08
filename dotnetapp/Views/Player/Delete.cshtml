@@ -4,5 +4,32 @@
 {
     <div class="form-horizontal">
         <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Id)
+            @Html.DisplayFor(m=>m.Id)
+        </div>
+        <br>
+        <div class="form-group">
             @Html.DisplayNameFor(m=>m.Age)
+            @Html.DisplayFor(m=>m.Age)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Name)
+            @Html.DisplayFor(m=>m.Name)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Category)
+            @Html.DisplayFor(m=>m.Category)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.BiddingAmount)
+            @Html.DisplayFor(m=>m.BiddingAmount)
+        </div>
+        <br>
+    </div>
+    <br>
+    <input type="submit" value="Delete" class="btn btn-primary">
+
 }

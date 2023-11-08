@@ -57,6 +57,7 @@ namespace dotnetapp.Controllers
         [HttpPost]
         public IActionResult DeletePlayer(int id,Player player)
         {
+            pList.Remove()
             return RedirectToAction("Index");
         }
         public IActionResult EditPlayer(int id)
