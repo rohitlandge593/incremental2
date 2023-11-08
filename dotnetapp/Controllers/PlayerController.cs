@@ -14,7 +14,12 @@ namespace dotnetapp.Controllers
         {
             _context = context;
         }
-        private List<Player> pList=new List<Player>{
+
+
+
+
+
+        private static  List<Player> pList=new List<Player>{
             new Player{Id=1,Age=25,Name="Sunil Chhetri",Category="Football",BiddingAmount=10000},
             new Player{Id=2,Age=30,Name="Virat Kohli",Category="Cricket",BiddingAmount=20000},
             new Player{Id=3,Age=35,Name="Virender",Category="Boxing",BiddingAmount=30000},
