@@ -38,6 +38,7 @@ namespace dotnetapp.Controllers
         public IActionResult Create(Team team)
         {
             _context.Teams.Add(team);
+            _context.SaveChanges();
             return RedirectToAction("Index");
         }
 

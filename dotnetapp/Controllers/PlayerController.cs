@@ -44,6 +44,7 @@ namespace dotnetapp.Controllers
         {
             //pList.Add(player);
             _context.Players.Add(player);
+            _context.SaveChanges();
             return RedirectToAction("Index");
         }
         [HttpGet]
