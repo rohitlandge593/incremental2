@@ -65,7 +65,7 @@ namespace dotnetapp.Controllers
                 return NotFound("ID Not Found");
         }
         [HttpGet]
-        public IActionResult DeletePlayer(int id)
+        public IActionResult Delete(int id)
         {
             //var playerList=pList.FirstOrDefault(i=>i.Id==id);
             var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
@@ -77,7 +77,7 @@ namespace dotnetapp.Controllers
                 return NotFound();
         }
         [HttpPost]
-        public IActionResult DeletePlayer(int id,Player player)
+        public IActionResult Delete(int id,Player player)
         {
             //var playerList=pList.FirstOrDefault(i=>i.Id==id);
             var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
@@ -90,7 +90,7 @@ namespace dotnetapp.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public IActionResult EditPlayer(int id)
+        public IActionResult Edit(int id)
         {
             //var playerList=pList.FirstOrDefault(i=>i.Id==id);
             var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
@@ -102,7 +102,7 @@ namespace dotnetapp.Controllers
                 return NotFound();
         }
         [HttpPost]
-        public IActionResult EditPlayer(int id,Player player)
+        public IActionResult Edit(int id,Player player)
         {
             //var playerList=pList.FirstOrDefault(i=>i.Id==id);
             var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);

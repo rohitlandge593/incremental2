@@ -2,7 +2,7 @@
     <h4>Player</h4>
     @Html.ActionLink("Add Player","Create","Player")
     <br>
-    @Html.ActionLink("Search Player","FindPlayer","Player")
+    @Html.ActionLink("Search Player","Find","Player")
    
     <table class="table">
         <tr>
@@ -24,8 +24,8 @@
                     <td>@v.TeamId</td>
                     <td>@v.BiddingAmount</td>
                     <td>
-                        @Html.ActionLink("Edit","EditPlayer","Player",new{id=v.Id}) &nbsp;&nbsp;&nbsp;
-                        @Html.ActionLink("Delete","DeletePlayer","Player",new{id=v.Id}) &nbsp;&nbsp;&nbsp;
+                        @Html.ActionLink("Edit","Edit","Player",new{id=v.Id}) &nbsp;&nbsp;&nbsp;
+                        @Html.ActionLink("Delete","Delete","Player",new{id=v.Id}) &nbsp;&nbsp;&nbsp;
 
                     </td> 
                    
