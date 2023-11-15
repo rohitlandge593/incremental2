@@ -15,5 +15,11 @@ namespace dotnetapp.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
 
         // write your AccountController here...
+        public ApplicationDbContext _context;
+
+        public AccountController(ApplicationDbContext context)
+        {
+            _context=context;
+        }
     }
 }
