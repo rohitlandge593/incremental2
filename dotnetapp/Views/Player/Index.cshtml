@@ -10,7 +10,7 @@
             <th>@Html.DisplayNameFor(m=>m.Age)</th>
             <th>@Html.DisplayNameFor(m=>m.Name)</th>
             <th>@Html.DisplayNameFor(m=>m.Category)</th>
-            <th>@Html.DisplayNameFor(m=>m.TeamId)</th>
+            <th>@Html.DisplayNameFor(m=>m.Team.Name)</th>
             <th>@Html.DisplayNameFor(m=>m.BiddingAmount)</th>
         </tr>
         <tbody>
@@ -21,7 +21,7 @@
                     <td>@v.Age</td>
                     <td>@v.Name</td>
                     <td>@v.Category</td>
-                    <td>@v.TeamId</td>
+                    <td>@v.Team.Name</td>
                     <td>@v.BiddingAmount</td>
                     <td>
                         @Html.ActionLink("Edit","Edit","Player",new{id=v.Id}) &nbsp;&nbsp;&nbsp;
