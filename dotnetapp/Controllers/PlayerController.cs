@@ -30,13 +30,14 @@ namespace dotnetapp.Controllers
         
         public IActionResult Index()
         {
-            var playerList=_context.Players;
-            //return View(pList);
+            var playerList=_context.Players.Include("Teams").ToList();
+            
             return View(playerList);
         }
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.playerList=new SelectList(_context.Players,"TeamId","Name");
             return View();
         }
         [HttpPost]

@@ -9,11 +9,6 @@
         </div>
         <br> *@
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.TeamId)
-            @Html.EditorFor(m=>m.TeamId)
-        </div>
-        <br>
-        <div class="form-group">
             @Html.DisplayNameFor(m=>m.Age)
             @Html.EditorFor(m=>m.Age)
         </div>
@@ -27,6 +22,11 @@
             @Html.DisplayNameFor(m=>m.Category)
             @Html.EditorFor(m=>m.Category)
         </div>
+        <br>
+        <label>Select Team</label>
+        <select asp-for="TeamId" asp-items="ViewBag.playerList">
+        <option value=''>Choose Team</option>
+        </select>
         <br>
         <div class="form-group">
             @Html.DisplayNameFor(m=>m.BiddingAmount)
