@@ -31,7 +31,7 @@ namespace dotnetapp.Controllers
         
         public IActionResult Index()
         {
-            var playerList=_context.Players.Include("Teams").ToList();
+            var playerList=_context.Players.Include("Team").ToList();
             
             return View(playerList);
         }

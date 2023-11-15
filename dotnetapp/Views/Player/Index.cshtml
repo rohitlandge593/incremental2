@@ -24,8 +24,8 @@
                     <td>@v.Team.Name</td>
                     <td>@v.BiddingAmount</td>
                     <td>
-                        @Html.ActionLink("Edit","Edit","Player",new{id=v.Id}) &nbsp;&nbsp;&nbsp;
-                        @Html.ActionLink("Delete","Delete","Player",new{id=v.Id}) &nbsp;&nbsp;&nbsp;
+                        @Html.ActionLink("Edit","Edit","Player",new{id=v.Id}, new{@class = "btn btn-primary" }) &nbsp;&nbsp;&nbsp;
+                        @Html.ActionLink("Delete","Delete","Player",new{id=v.Id}, new{@class = "btn btn-danger" }) &nbsp;&nbsp;&nbsp;
 
                     </td> 
                    
