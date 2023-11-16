@@ -9,11 +9,11 @@ namespace dotnetapp.Controllers
 {
     public class PlayerController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext context;
 
-        public PlayerController(ApplicationDbContext context)
+        public PlayerController(ApplicationDbContext _context)
         {
-            _context = context;
+            context = _context;
         }
 
 
@@ -31,22 +31,22 @@ namespace dotnetapp.Controllers
         
         public IActionResult Index()
         {
-            var playerList=_context.Players.Include("Team").ToList();
+            var playerList=context.Players.Include("Team").ToList();
             
             return View(playerList);
         }
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.playerList=new SelectList(_context.Players,"TeamId","Name");
+            ViewBag.playerList=new SelectList(context.Players,"TeamId","Name");
             return View();
         }
         [HttpPost]
         public IActionResult Create(Player player)
         {
             //pList.Add(player);
-            _context.Players.Add(player);
-            _context.SaveChanges();
+            context.Players.Add(player);
+            context.SaveChanges();
             return RedirectToAction("Index");
         }
         [HttpGet]
@@ -58,7 +58,7 @@ namespace dotnetapp.Controllers
         public IActionResult FindPlayer(int id)
         {
             //var playerList=pList.FirstOrDefault(i=>i.Id==id);
-            var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
+            var playerList=context.Players.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
                 return View("Search",playerList);
@@ -70,7 +70,7 @@ namespace dotnetapp.Controllers
         public IActionResult Delete(int id)
         {
             //var playerList=pList.FirstOrDefault(i=>i.Id==id);
-            var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
+            var playerList=context.Players.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
                 return View(playerList);
@@ -82,12 +82,12 @@ namespace dotnetapp.Controllers
         public IActionResult Delete(int id,Player player)
         {
             //var playerList=pList.FirstOrDefault(i=>i.Id==id);
-            var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
+            var playerList=context.Players.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
                 //pList.Remove(playerList);
-                _context.Players.Remove(playerList);
-                _context.SaveChanges();
+                context.Players.Remove(playerList);
+                context.SaveChanges();
             }
             return RedirectToAction("Index");
         }
@@ -95,7 +95,7 @@ namespace dotnetapp.Controllers
         public IActionResult Edit(int id)
         {
             //var playerList=pList.FirstOrDefault(i=>i.Id==id);
-            var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
+            var playerList=context.Players.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
                 return View(playerList);
@@ -107,14 +107,14 @@ namespace dotnetapp.Controllers
         public IActionResult Edit(int id,Player player)
         {
             //var playerList=pList.FirstOrDefault(i=>i.Id==id);
-            var playerList=_context.Players.FirstOrDefault(i=>i.Id==id);
+            var playerList=context.Players.FirstOrDefault(i=>i.Id==id);
             if(playerList!=null)
             {
                 playerList.Age=player.Age;
                 playerList.Name=player.Name;
                 playerList.Category=player.Category;
                 playerList.BiddingAmount=player.BiddingAmount;
-                _context.SaveChanges();
+                context.SaveChanges();
                 
             }
             return RedirectToAction("Index");
