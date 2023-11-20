@@ -28,7 +28,7 @@ namespace dotnetapp.Controllers
         //     new Player{Id=4,Age=40,Name="Anup Kumar",Category="Kabaddi",BiddingAmount=40000},
         // };
             
-        [Route("Index")]
+        [Route("")]
         public IActionResult Index()
         {
             var playerList=context.Players.Include("Team").ToList();
