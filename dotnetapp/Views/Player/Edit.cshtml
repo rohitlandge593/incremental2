@@ -1,34 +1,36 @@
 @model dotnetapp.Models.Player;
-<h4>Edit</h4>
+<h4 style="text-align:center;">Edit</h4>
 <div class="container col-4">
 @using(Html.BeginForm())
 {
     <div class="form-horizontal">
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Id)
-            @Html.DisplayFor(m=>m.Id)
+            @Html.LabelFor(m=>m.Id, new { @class="control-lable"})
+            <div class="display-field">
+            @Html.DisplayFor(m=>m.Id, new { @class= "form-control"})
+            </div>
         </div>
-        <br>
+        
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Age)
-            @Html.EditorFor(m=>m.Age)
+            @Html.LabelFor(m=>m.Age, new { @class="control-lable"})
+            @Html.TextBoxFor(m=>m.Age, new { @class= "form-control"})
         </div>
-        <br>
+        
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Name)
-            @Html.EditorFor(m=>m.Name)
+            @Html.LabelFor(m=>m.Name, new { @class="control-lable"})
+            @Html.TextBoxFor(m=>m.Name, new { @class= "form-control"})
         </div>
-        <br>
+        
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Category)
-            @Html.EditorFor(m=>m.Category)
+            @Html.LabelFor(m=>m.Category, new { @class="control-lable"})
+            @Html.TextBoxFor(m=>m.Category, new { @class= "form-control"})
         </div>
-        <br>
+        
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.BiddingAmount)
-            @Html.EditorFor(m=>m.BiddingAmount)
+            @Html.LabelFor(m=>m.BiddingAmount, new { @class="control-lable"})
+            @Html.TextBoxFor(m=>m.BiddingAmount, new { @class= "form-control"})
         </div>
-        <br>
+        
         <br>
     </div>
     <input type="submit" value="EditPlayer" calss="btn btn-primary">

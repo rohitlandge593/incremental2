@@ -1,16 +1,21 @@
 @model dotnetapp.Models.Player;
-<h4>Delete</h4>
+<h4 style="text-align:center">Delete</h4>
+<div class="container col-4">
 @using(Html.BeginForm())
 {
     <div class="form-horizontal">
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Id)
+            <th><b>Id</b></th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.Id)
+            </div>
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Age)
+            <th><b>Age</b></th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.Age)
+            </div>
         </div>
         <br>
         <div class="form-group">
