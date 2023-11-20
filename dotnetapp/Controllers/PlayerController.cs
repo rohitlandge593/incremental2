@@ -39,7 +39,7 @@ namespace dotnetapp.Controllers
         [Route("Create")]
         public IActionResult Create()
         {
-            ViewBag.playerList=new SelectList(context.Players,"TeamId","Name");
+            ViewBag.playerList=new SelectList(context.Teams,"TeamId","Name");
             return View();
         }
         [HttpPost]

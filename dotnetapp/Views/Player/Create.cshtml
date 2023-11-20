@@ -3,39 +3,42 @@
 @using(Html.BeginForm())
 {
     <div class="panel panel-primary">
-    <div class="form-horizontal">
-        @* <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Id)
-            @Html.EditorFor(m=>m.Id)
-        </div>
-        <br> *@
+    
+        
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Age)
-            @Html.EditorFor(m=>m.Age)
+            @Html.LabelFor(m=>m.Age, new { @class= "control-label" })
+            @Html.TextBoxFor(m=>m.Age, new { @class= "form-control"})
+            @Html.ValidationMessageFor(m=>m.Age, "", new { @class= "text-danger"})
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Name)
-            @Html.EditorFor(m=>m.Name)
+            @Html.LabelFor(m=>m.Name)
+            @Html.TextBoxFor(m=>m.Name)
+            @Html.ValidationMessageFor(m=>m.Name, "", new { @class= "text-danger"})
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Category)
-            @Html.EditorFor(m=>m.Category)
+            @Html.LabelFor(m=>m.Category)
+            @Html.TextBoxFor(m=>m.Category)
+            @Html.ValidationMessageFor(m=>m.Category, "", new { @class= "text-danger"})
         </div>
         <br>
+        <div class="form-group">
         <label>Select Team</label>
         <select asp-for="TeamId" asp-items="ViewBag.playerList">
         <option value=''>Choose Team</option>
         </select>
+        </div>
+        <br>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.BiddingAmount)
-            @Html.EditorFor(m=>m.BiddingAmount)
+            @Html.LabelFor(m=>m.BiddingAmount)
+            @Html.TextBoxFor(m=>m.BiddingAmount)
+            @Html.ValidationMessageFor(m=>m.BiddingAmount, "", new { @class= "text-danger"})
         </div>
         <br>
     </div>
-    </div>
+   
         <br>
         <br>
     
