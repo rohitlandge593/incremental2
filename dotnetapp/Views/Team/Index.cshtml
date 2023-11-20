@@ -12,6 +12,8 @@
                 <tr>
                     <td>@v.TeamId</td>
                     <td>@v.Name</td>
+                    <td>
+                        @Html.ActionLink("Edit","Edit","Team",new{id=v.TeamId}, new{@class = "btn btn-primary" }) &nbsp;&nbsp;&nbsp;
                 </tr>
             }
         </tbody>

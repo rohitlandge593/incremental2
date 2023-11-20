@@ -1,0 +1,21 @@
+@model dotnetapp.Models.Team;
+<h4>Edit</h4>
+@using(Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.TeamId)
+            @Html.DisplayFor(m=>m.TeamId)
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.DisplayNameFor(m=>m.Name)
+            @Html.EditorFor(m=>m.Name)
+        </div>
+        
+        
+        <br>
+        <br>
+    </div>
+    <input type="submit" value="EditTeam" calss="btn btn-primary">
+}
