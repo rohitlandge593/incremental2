@@ -2,6 +2,7 @@
 <h4>Edit</h4>
 @using(Html.BeginForm())
 {
+    <div class="panel panel-primary">
     <div class="form-horizontal">
         <div class="form-group">
             @Html.DisplayNameFor(m=>m.TeamId)
@@ -16,6 +17,7 @@
         
         <br>
         <br>
+    </div>
     </div>
     <input type="submit" value="EditTeam" calss="btn btn-primary">
 }

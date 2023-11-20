@@ -58,15 +58,12 @@ namespace dotnetapp.Controllers
             var teamList=_context.Teams.FirstOrDefault(i=>i.TeamId==id);
             if(teamList!=null)
             {
-                teamList.TeamId=team.TeamId;
+                
                 teamList.Name=team.Name;
                 _context.SaveChanges();
-               return RedirectToAction("Index");
+               
             }
-            else
-            {
-                return NotFound();
-            }
+            return RedirectToAction("Index");
 
         }
 
