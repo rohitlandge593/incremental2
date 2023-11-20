@@ -1,5 +1,5 @@
 @model dotnetapp.Models.Player
-<h4>Enter Details</h4>
+<h4 style="text-align:center;">Enter Details</h4>
 @using(Html.BeginForm())
 {
     <div class="panel panel-primary">
@@ -12,14 +12,14 @@
         </div>
         <br>
         <div class="form-group">
-            @Html.LabelFor(m=>m.Name)
-            @Html.TextBoxFor(m=>m.Name)
+            @Html.LabelFor(m=>m.Name, new { @class="control-lable"})
+            @Html.TextBoxFor(m=>m.Name, new { @class= "form-control"})
             @Html.ValidationMessageFor(m=>m.Name, "", new { @class= "text-danger"})
         </div>
         <br>
         <div class="form-group">
-            @Html.LabelFor(m=>m.Category)
-            @Html.TextBoxFor(m=>m.Category)
+            @Html.LabelFor(m=>m.Category, new { @class="control-lable"})
+            @Html.TextBoxFor(m=>m.Category, new { @class= "form-control"})
             @Html.ValidationMessageFor(m=>m.Category, "", new { @class= "text-danger"})
         </div>
         <br>
@@ -32,8 +32,8 @@
         <br>
         <br>
         <div class="form-group">
-            @Html.LabelFor(m=>m.BiddingAmount)
-            @Html.TextBoxFor(m=>m.BiddingAmount)
+            @Html.LabelFor(m=>m.BiddingAmount, new { @class="control-lable"})
+            @Html.TextBoxFor(m=>m.BiddingAmount, new { @class= "form-control"})
             @Html.ValidationMessageFor(m=>m.BiddingAmount, "", new { @class= "text-danger"})
         </div>
         <br>

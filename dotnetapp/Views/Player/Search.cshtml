@@ -1,38 +1,38 @@
 @model dotnetapp.Models.Player
 @using(Html.BeginForm())
 {
-    <div class="form-horizontal">
+    
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Id)
-            @Html.DisplayFor(m=>m.Id)
+            @Html.LabelFor(m=>m.Id, new { @class="control-lable"})
+            @Html.DisplayFor(m=>m.Id, new { @class= "form-control"})
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.TeamId)
-            @Html.DisplayFor(m=>m.TeamId)
+            @Html.LabelFor(m=>m.TeamId, new { @class="control-lable"})
+            @Html.DisplayFor(m=>m.TeamId, new { @class= "form-control"})
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Age)
-            @Html.DisplayFor(m=>m.Age)
+            @Html.LabelFor(m=>m.Age, new { @class="control-lable"})
+            @Html.DisplayFor(m=>m.Age, new { @class= "form-control"})
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Name)
-            @Html.DisplayFor(m=>m.Name)
+            @Html.LabelFor(m=>m.Name, new { @class="control-lable"})
+            @Html.DisplayFor(m=>m.Name, new { @class= "form-control"})
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Category)
-            @Html.DisplayFor(m=>m.Category)
+            @Html.LabelFor(m=>m.Category, new { @class="control-lable"})
+            @Html.DisplayFor(m=>m.Category, new { @class= "form-control"})
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.BiddingAmount)
-            @Html.DisplayFor(m=>m.BiddingAmount)
+            @Html.LabelFor(m=>m.BiddingAmount, new { @class="control-lable"})
+            @Html.DisplayFor(m=>m.BiddingAmount, new { @class= "form-control"})
         </div>
         <br>
-    </div>
+    
     <br>
     <br>
 
