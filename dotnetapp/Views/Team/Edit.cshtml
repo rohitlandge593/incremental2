@@ -1,23 +1,27 @@
 @model dotnetapp.Models.Team;
-<h4>Edit</h4>
+<h4 style="text-align:center">Edit</h4>
+<div class="container col-4">
 @using(Html.BeginForm())
 {
     <div class="panel panel-primary">
-    <div class="form-horizontal">
+    
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.TeamId)
+            @Html.LabelFor(m=>m.TeamId, new { @class="control-label" })
+            <div class="display-field">
             @Html.DisplayFor(m=>m.TeamId)
+            </div>
         </div>
-        <br>
+        
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Name)
-            @Html.EditorFor(m=>m.Name)
+            @Html.LabelFor(m=>m.Name, new{ @class= "control-label"})
+            @Html.TextBoxFor(m=>m.Name, new { @class = "form-control"})
         </div>
         
         
         <br>
-        <br>
+        
     </div>
-    </div>
+    
     <input type="submit" value="EditTeam" calss="btn btn-primary">
 }
+</div>

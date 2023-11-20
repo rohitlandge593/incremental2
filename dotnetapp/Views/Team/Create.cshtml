@@ -1,23 +1,20 @@
 @model dotnetapp.Models.Team
-<h2>Add Team</h2>
+<h2 style="text-align:center">Add Team</h2>
+<div class="container col-4">
 @using(Html.BeginForm())
 {
     <div class="panel panel-primary">
-    <div class="form-horizontal">
-        @* @* <div class="form-group">
-            @Html.DisplayNameFor(m=>m.TeamId)
-            @Html.EditorFor(m=>m.TeamId)
-        </div> 
-        <br> *@
+    
+        
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Name)
-            @Html.EditorFor(m=>m.Name)
+            @Html.LabelFor(m=>m.Name, new { @class="control-label"})
+            @Html.TextBoxFor(m=>m.Name, new { @class = "form-control"})
         </div>
         <br>
-        <br>
-    </div>
+        
     </div>
     <br>
     <input type="submit" value="Submit" class="btn btn-primary" />
         
 }
+</div>
