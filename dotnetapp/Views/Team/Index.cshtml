@@ -4,8 +4,9 @@
     @Html.ActionLink("Add Teams","Create","Team")
     <table class="table">
         <tr>
-            <th>@Html.DisplayNameFor(m=>m.TeamId)</th>
-            <th>@Html.DisplayNameFor(m=>m.Name)</th>
+            <th><b>@Html.DisplayNameFor(m=>m.TeamId)</b></th>
+            <th><b>@Html.DisplayNameFor(m=>m.Name)</b></th>
+            <th><b>Actions</b></th>
         </tr>
         <tbody>
             @foreach(var v in Model)
