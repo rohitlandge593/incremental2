@@ -1,41 +1,55 @@
 @model dotnetapp.Models.Player
 <h2 style="text-align:center;">Player Details</h2>
+<div class="container col-4">
 @using(Html.BeginForm())
 {
-    <div >
+    <div class="panel panel-primary">
         <div class="form-group">
-            @Html.LabelFor(m=>m.Id, new { @class="control-lable"})
+            <th><b>ID</b></th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.Id, new { @class= "form-control"})
+            </div>
         </div>
-        <br>
+        
         <div class="form-group">
-            @Html.LabelFor(m=>m.TeamId, new { @class="control-lable"})
+            <th><b>TeamId</b></th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.TeamId, new { @class= "form-control"})
+            </div>
         </div>
-        <br>
+        
         <div class="form-group">
-            @Html.LabelFor(m=>m.Age, new { @class="control-lable"})
+            <th><b>Age</b></th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.Age, new { @class= "form-control"})
+            </div>
         </div>
-        <br>
+        
         <div class="form-group">
-            @Html.LabelFor(m=>m.Name, new { @class="control-lable"})
+            <th><b>Name</b></th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.Name, new { @class= "form-control"})
+            </div>
         </div>
-        <br>
+        
         <div class="form-group">
-            @Html.LabelFor(m=>m.Category, new { @class="control-lable"})
+            <th><b>Category</b></th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.Category, new { @class= "form-control"})
+            </div>
         </div>
-        <br>
+        
         <div class="form-group">
-            @Html.LabelFor(m=>m.BiddingAmount, new { @class="control-lable"})
+            <th><b>BiddingAmount</b><th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.BiddingAmount, new { @class= "form-control"})
+            </div>
         </div>
-        <br>
+        
     
     <br>
     <br>
-
+    </div>
 }
+</div>
 @Html.ActionLink("Back to List","Index","Player")
