@@ -1,12 +1,12 @@
 @model IEnumerable<dotnetapp.Models.Player>
-    <h4 style="text-align:center;">Champions Directory </h4>
+    <h4 class="blue-header" style="text-align:center;"><b>Champions Directory</b></h4>
     @Html.ActionLink("Add Player","Create","Player") 
-    <br><br>
+    <br>
     @Html.ActionLink("Search Player","FindPlayer","Player") 
-   
+    <br><br>
     <table class="table table-hover">
         <tr>
-            <th>@Html.DisplayNameFor(m=>m.Id)</th>
+            <th class="blue-header">@Html.DisplayNameFor(m=>m.Id)</th>
             <th>@Html.DisplayNameFor(m=>m.Age)</th>
             <th>PlayerName</th>
             <th>@Html.DisplayNameFor(m=>m.Category)</th>

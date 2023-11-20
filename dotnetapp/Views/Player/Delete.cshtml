@@ -19,18 +19,24 @@
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Name)
+            <th><b>Name</b></th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.Name)
+            </div>
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.Category)
+            <th><b>Category</b></th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.Category)
+            </div>
         </div>
         <br>
         <div class="form-group">
-            @Html.DisplayNameFor(m=>m.BiddingAmount)
+            <th><b>BiddingAmount</b></th>
+            <div class="display-field">
             @Html.DisplayFor(m=>m.BiddingAmount)
+            </div>
         </div>
         <br>
     </div>
@@ -38,3 +44,4 @@
     <input type="submit" value="Delete" class="btn btn-danger">
 
 }
+</div>

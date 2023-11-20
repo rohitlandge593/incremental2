@@ -1,16 +1,15 @@
 @model dotnetapp.Models.Player;
-<h2>Search Player</h2>
+<h4 style="text-align:center">Search Player</h4>
 <br>
-<hr>
-<h4>Enter the Id to be Search</h4>
+<div class="container col-4">
+<h3>Enter the Id to be Search</h3>
 @using(Html.BeginForm())
 {
-        @Html.DisplayNameFor(m=>m.Id)
-        @Html.EditorFor(m=>m.Id)
+        @Html.LabelFor(m=>m.Id, new { @class="control-lable"})
+        @Html.TextBoxFor(m=>m.Id, new { @class="form-control"})
 
-    <br>
-    <br>
     <br>
 <input type="submit" value="SearchPlayer" class="btn btn-primary" />
 }
+</div>
 
